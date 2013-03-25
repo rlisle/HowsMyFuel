@@ -11,7 +11,8 @@
 		2715D9341701137F00FB8F5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
 		2715D9351701137F00FB8F5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
 		2715D93B1701137F00FB8F5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2715D9391701137F00FB8F5A /* InfoPlist.strings */; };
-		2715D93E1701137F00FB8F5A /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2715D93D1701137F00FB8F5A /* UnitTests.m */; };
+		2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */; };
+		27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F888001701111800E4CFAB /* HMFAppDelegate.m */; };
 		27F887F11701111800E4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
 		27F887F31701111800E4CFAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
 		27F887F51701111800E4CFAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
@@ -29,8 +30,7 @@
 		2715D9321701137F00FB8F5A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2715D9381701137F00FB8F5A /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		2715D93A1701137F00FB8F5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2715D93C1701137F00FB8F5A /* UnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTests.h; sourceTree = "<group>"; };
-		2715D93D1701137F00FB8F5A /* UnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTests.m; sourceTree = "<group>"; };
+		2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMFAppDelegateTests.m; sourceTree = "<group>"; };
 		2715D93F1701137F00FB8F5A /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -77,8 +77,7 @@
 		2715D9361701137F00FB8F5A /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				2715D93C1701137F00FB8F5A /* UnitTests.h */,
-				2715D93D1701137F00FB8F5A /* UnitTests.m */,
+				2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */,
 				2715D9371701137F00FB8F5A /* Supporting Files */,
 			);
 			path = UnitTests;
@@ -274,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2715D93E1701137F00FB8F5A /* UnitTests.m in Sources */,
+				2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */,
+				27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
