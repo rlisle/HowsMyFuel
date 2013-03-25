@@ -21,6 +21,7 @@
 		27F888031701111800E4CFAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F888021701111800E4CFAB /* Default.png */; };
 		27F888051701111800E4CFAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F888041701111800E4CFAB /* Default@2x.png */; };
 		27F888071701111800E4CFAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F888061701111800E4CFAB /* Default-568h@2x.png */; };
+		2C6B7F210FC94D4C8628670B /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		27F888021701111800E4CFAB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		27F888041701111800E4CFAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		27F888061701111800E4CFAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.xcconfig"; path = "Pods/Pods-UnitTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 				2715D9331701137F00FB8F5A /* SenTestingKit.framework in Frameworks */,
 				2715D9341701137F00FB8F5A /* UIKit.framework in Frameworks */,
 				2715D9351701137F00FB8F5A /* Foundation.framework in Frameworks */,
+				2C6B7F210FC94D4C8628670B /* libPods-UnitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 				2715D9361701137F00FB8F5A /* UnitTests */,
 				27F887EF1701111800E4CFAB /* Frameworks */,
 				27F887EE1701111800E4CFAB /* Products */,
+				5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +121,7 @@
 				27F887F21701111800E4CFAB /* Foundation.framework */,
 				27F887F41701111800E4CFAB /* CoreGraphics.framework */,
 				2715D9321701137F00FB8F5A /* SenTestingKit.framework */,
+				DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				2715D92D1701137F00FB8F5A /* Frameworks */,
 				2715D92E1701137F00FB8F5A /* Resources */,
 				2715D92F1701137F00FB8F5A /* ShellScript */,
+				E5E91A6449914CE693B3E919 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +253,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		E5E91A6449914CE693B3E919 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-UnitTests-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -290,8 +311,10 @@
 /* Begin XCBuildConfiguration section */
 		2715D9401701137F00FB8F5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
@@ -305,8 +328,10 @@
 		};
 		2715D9411701137F00FB8F5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
@@ -406,6 +431,7 @@
 				2715D9411701137F00FB8F5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27F887E81701111800E4CFAB /* Build configuration list for PBXProject "HowsMyFuel" */ = {
 			isa = XCConfigurationList;
