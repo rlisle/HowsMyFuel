@@ -13,6 +13,7 @@
 		2715D93B1701137F00FB8F5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2715D9391701137F00FB8F5A /* InfoPlist.strings */; };
 		2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */; };
 		27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F888001701111800E4CFAB /* HMFAppDelegate.m */; };
+		27BBAAC01705C6E900575315 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27F887F11701111800E4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
 		27F887F31701111800E4CFAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
 		27F887F51701111800E4CFAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 		2715D93A1701137F00FB8F5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMFAppDelegateTests.m; sourceTree = "<group>"; };
 		2715D93F1701137F00FB8F5A /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		27BBAABE1705C3C300575315 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27F887F21701111800E4CFAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BBAAC01705C6E900575315 /* CoreGraphics.framework in Frameworks */,
 				2715D9331701137F00FB8F5A /* SenTestingKit.framework in Frameworks */,
 				2715D9341701137F00FB8F5A /* UIKit.framework in Frameworks */,
 				2715D9351701137F00FB8F5A /* Foundation.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		27F887E41701111800E4CFAB = {
 			isa = PBXGroup;
 			children = (
+				27BBAABE1705C3C300575315 /* CoreText.framework */,
 				27F887F61701111800E4CFAB /* HowsMyFuel */,
 				2715D9361701137F00FB8F5A /* UnitTests */,
 				27F887EF1701111800E4CFAB /* Frameworks */,

@@ -25,14 +25,11 @@ context(@"HMFAppDelegate", ^{
             [appdel shouldNotBeNil];
         });
     });
-    
-    describe(@"when didFinishlaunchingWithOptions is called", ^{
-        
-        beforeEach(^{
-        });
-       
+
+    describe(@"when app launches", ^{
+
         // Note: on 3/26/13 the following test fails if pod isn't updated to use Kiwi :head
-        it(@"sets window property", ^{
+        it(@"creates a full screen, white window", ^{
             id windowMock1 = [UIWindow mock];
             [[UIWindow stubAndReturn:windowMock1] alloc];
             id screenMock = [UIScreen mock];
@@ -44,8 +41,8 @@ context(@"HMFAppDelegate", ^{
             [[[windowMock2 should] receive] makeKeyAndVisible];
             [appdel application:nil didFinishLaunchingWithOptions:nil];
             [appdel.window shouldNotBeNil];
-            
         });
+        
     });
     
 });
