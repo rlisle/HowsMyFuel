@@ -12,6 +12,11 @@
 		2715D9351701137F00FB8F5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
 		2715D93B1701137F00FB8F5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2715D9391701137F00FB8F5A /* InfoPlist.strings */; };
 		2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */; };
+		27468533170E09630065BB7E /* HMFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468531170E09630065BB7E /* HMFViewController.m */; };
+		27468534170E09630065BB7E /* HMFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468531170E09630065BB7E /* HMFViewController.m */; };
+		27468535170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
+		27468536170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
+		27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
 		27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F888001701111800E4CFAB /* HMFAppDelegate.m */; };
 		27BBAAC01705C6E900575315 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27F887F11701111800E4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
@@ -33,6 +38,10 @@
 		2715D93A1701137F00FB8F5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMFAppDelegateTests.m; sourceTree = "<group>"; };
 		2715D93F1701137F00FB8F5A /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		27468530170E09630065BB7E /* HMFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFViewController.h; sourceTree = "<group>"; };
+		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
+		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
+		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
 		27BBAABE1705C3C300575315 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +91,7 @@
 			children = (
 				2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */,
 				2715D9371701137F00FB8F5A /* Supporting Files */,
+				27468538170E09A50065BB7E /* HMFViewControllerTests.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -135,6 +145,9 @@
 				27F887FF1701111800E4CFAB /* HMFAppDelegate.h */,
 				27F888001701111800E4CFAB /* HMFAppDelegate.m */,
 				27F887F71701111800E4CFAB /* Supporting Files */,
+				27468530170E09630065BB7E /* HMFViewController.h */,
+				27468531170E09630065BB7E /* HMFViewController.m */,
+				27468532170E09630065BB7E /* HMFViewController.xib */,
 			);
 			path = HowsMyFuel;
 			sourceTree = "<group>";
@@ -226,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2715D93B1701137F00FB8F5A /* InfoPlist.strings in Resources */,
+				27468536170E09630065BB7E /* HMFViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +251,7 @@
 				27F888031701111800E4CFAB /* Default.png in Resources */,
 				27F888051701111800E4CFAB /* Default@2x.png in Resources */,
 				27F888071701111800E4CFAB /* Default-568h@2x.png in Resources */,
+				27468535170E09630065BB7E /* HMFViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +294,8 @@
 			files = (
 				2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */,
 				27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */,
+				27468534170E09630065BB7E /* HMFViewController.m in Sources */,
+				27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +305,7 @@
 			files = (
 				27F887FD1701111800E4CFAB /* main.m in Sources */,
 				27F888011701111800E4CFAB /* HMFAppDelegate.m in Sources */,
+				27468533170E09630065BB7E /* HMFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

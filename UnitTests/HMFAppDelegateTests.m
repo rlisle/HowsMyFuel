@@ -7,6 +7,7 @@
 //
 
 #import "HMFAppDelegate.h"
+#import "HMFViewController.h"
 
 #import "Kiwi.h"
 
@@ -55,6 +56,15 @@ context(@"HMFAppDelegate", ^{
                 [appdel application:nil didFinishLaunchingWithOptions:nil];
                 [[theValue(appdel.window.keyWindow) should] beYes];
                 [[theValue(appdel.window.isHidden) should] beNo];
+            });
+            
+        });
+        
+        describe(@"it creates a view", ^{
+            
+            specify(^{
+                [appdel application:nil didFinishLaunchingWithOptions:nil];
+                [appdel.viewController shouldNotBeNil];
             });
             
         });

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "HMFViewController.h"
 
 @interface HMFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) HMFViewController *viewController;
 
 @end
