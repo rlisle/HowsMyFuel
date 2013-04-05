@@ -51,7 +51,7 @@ context(@"HMFAppDelegate", ^{
                 BOOL rectsMatch = CGRectEqualToRect(appdel.window.frame,screen);
                 [[theValue(rectsMatch) should] beYes];
             });
-            
+
             it(@"that is Key and Visible", ^{
                 [appdel application:nil didFinishLaunchingWithOptions:nil];
                 [[theValue(appdel.window.keyWindow) should] beYes];
@@ -60,13 +60,14 @@ context(@"HMFAppDelegate", ^{
             
         });
         
-        describe(@"it creates a view", ^{
-            
-            specify(^{
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                [appdel.viewController shouldNotBeNil];
-            });
-            
+        it(@"creates a view", ^{
+            [appdel application:nil didFinishLaunchingWithOptions:nil];
+            [appdel.viewController shouldNotBeNil];
+        });
+        
+        it(@"makes the view the rootViewController", ^{
+            [appdel application:nil didFinishLaunchingWithOptions:nil];
+            [[appdel.viewController should] equal:appdel.window.rootViewController];
         });
         
         it(@"returns YES", ^{
