@@ -17,7 +17,13 @@
 		27468535170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468536170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
+		27A3D8DF170F316900E701D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F888001701111800E4CFAB /* HMFAppDelegate.m */; };
+		27B4E0ED170EF76C005BFF7E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2715D9321701137F00FB8F5A /* SenTestingKit.framework */; };
+		27B4E0EE170EF76C005BFF7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
+		27B4E0EF170EF76C005BFF7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
+		27B4E0F5170EF76C005BFF7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B4E0F3170EF76C005BFF7E /* InfoPlist.strings */; };
+		27B4E0F8170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B4E0F7170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m */; };
 		27BBAAC01705C6E900575315 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27F887F11701111800E4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
 		27F887F31701111800E4CFAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
@@ -29,6 +35,7 @@
 		27F888051701111800E4CFAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F888041701111800E4CFAB /* Default@2x.png */; };
 		27F888071701111800E4CFAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F888061701111800E4CFAB /* Default-568h@2x.png */; };
 		2C6B7F210FC94D4C8628670B /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */; };
+		BE3C60942120454D9CA476B4 /* libPods-ApplicationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE547603A0524894B9BE5247 /* libPods-ApplicationTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,11 @@
 		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
 		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
 		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
+		27B4E0EC170EF76C005BFF7E /* ApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B4E0F2170EF76C005BFF7E /* ApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTests-Info.plist"; sourceTree = "<group>"; };
+		27B4E0F4170EF76C005BFF7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27B4E0F7170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMFAppDelegateApplicationTests.m; sourceTree = "<group>"; };
+		27B4E0F9170EF76C005BFF7E /* ApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
 		27BBAABE1705C3C300575315 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +69,8 @@
 		27F888041701111800E4CFAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		27F888061701111800E4CFAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.xcconfig"; path = "Pods/Pods-UnitTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		7CDE651C491C476DB8603E82 /* Pods-ApplicationTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationTests.xcconfig"; path = "Pods/Pods-ApplicationTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		CE547603A0524894B9BE5247 /* libPods-ApplicationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApplicationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +84,18 @@
 				2715D9341701137F00FB8F5A /* UIKit.framework in Frameworks */,
 				2715D9351701137F00FB8F5A /* Foundation.framework in Frameworks */,
 				2C6B7F210FC94D4C8628670B /* libPods-UnitTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B4E0E8170EF76C005BFF7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B4E0ED170EF76C005BFF7E /* SenTestingKit.framework in Frameworks */,
+				27B4E0EE170EF76C005BFF7E /* UIKit.framework in Frameworks */,
+				27B4E0EF170EF76C005BFF7E /* Foundation.framework in Frameworks */,
+				BE3C60942120454D9CA476B4 /* libPods-ApplicationTests.a in Frameworks */,
+				27A3D8DF170F316900E701D8 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,15 +132,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		27B4E0F0170EF76C005BFF7E /* ApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				27B4E0F7170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m */,
+				27B4E0F1170EF76C005BFF7E /* Supporting Files */,
+			);
+			path = ApplicationTests;
+			sourceTree = "<group>";
+		};
+		27B4E0F1170EF76C005BFF7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27B4E0F2170EF76C005BFF7E /* ApplicationTests-Info.plist */,
+				27B4E0F3170EF76C005BFF7E /* InfoPlist.strings */,
+				27B4E0F9170EF76C005BFF7E /* ApplicationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		27F887E41701111800E4CFAB = {
 			isa = PBXGroup;
 			children = (
 				27BBAABE1705C3C300575315 /* CoreText.framework */,
 				27F887F61701111800E4CFAB /* HowsMyFuel */,
 				2715D9361701137F00FB8F5A /* UnitTests */,
+				27B4E0F0170EF76C005BFF7E /* ApplicationTests */,
 				27F887EF1701111800E4CFAB /* Frameworks */,
 				27F887EE1701111800E4CFAB /* Products */,
 				5E1BFE3BC3D74026BDFF4717 /* Pods-UnitTests.xcconfig */,
+				7CDE651C491C476DB8603E82 /* Pods-ApplicationTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +170,7 @@
 			children = (
 				27F887ED1701111800E4CFAB /* HowsMyFuel.app */,
 				2715D9311701137F00FB8F5A /* UnitTests.octest */,
+				27B4E0EC170EF76C005BFF7E /* ApplicationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +183,7 @@
 				27F887F41701111800E4CFAB /* CoreGraphics.framework */,
 				2715D9321701137F00FB8F5A /* SenTestingKit.framework */,
 				DB9D60E9EA684DA0BD629677 /* libPods-UnitTests.a */,
+				CE547603A0524894B9BE5247 /* libPods-ApplicationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,6 +237,25 @@
 			productReference = 2715D9311701137F00FB8F5A /* UnitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		27B4E0EB170EF76C005BFF7E /* ApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B4E0FC170EF76C005BFF7E /* Build configuration list for PBXNativeTarget "ApplicationTests" */;
+			buildPhases = (
+				27B4E0E7170EF76C005BFF7E /* Sources */,
+				27B4E0E8170EF76C005BFF7E /* Frameworks */,
+				27B4E0E9170EF76C005BFF7E /* Resources */,
+				27B4E0EA170EF76C005BFF7E /* ShellScript */,
+				A6C395488D0640DEA4E2D4FA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApplicationTests;
+			productName = ApplicationTests;
+			productReference = 27B4E0EC170EF76C005BFF7E /* ApplicationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		27F887EC1701111800E4CFAB /* HowsMyFuel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27F8880A1701111800E4CFAB /* Build configuration list for PBXNativeTarget "HowsMyFuel" */;
@@ -229,6 +297,7 @@
 			targets = (
 				27F887EC1701111800E4CFAB /* HowsMyFuel */,
 				2715D9301701137F00FB8F5A /* UnitTests */,
+				27B4E0EB170EF76C005BFF7E /* ApplicationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +309,14 @@
 			files = (
 				2715D93B1701137F00FB8F5A /* InfoPlist.strings in Resources */,
 				27468536170E09630065BB7E /* HMFViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B4E0E9170EF76C005BFF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B4E0F5170EF76C005BFF7E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +348,33 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		27B4E0EA170EF76C005BFF7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A6C395488D0640DEA4E2D4FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ApplicationTests-resources.sh\"\n";
+		};
 		E5E91A6449914CE693B3E919 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +403,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27B4E0E7170EF76C005BFF7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B4E0F8170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F887E91701111800E4CFAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +428,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2715D93A1701137F00FB8F5A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27B4E0F3170EF76C005BFF7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27B4E0F4170EF76C005BFF7E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -361,6 +481,46 @@
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		27B4E0FA170EF76C005BFF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CDE651C491C476DB8603E82 /* Pods-ApplicationTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HowsMyFuel.app/HowsMyFuel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTests/ApplicationTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
+				INFOPLIST_FILE = "ApplicationTests/ApplicationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		27B4E0FB170EF76C005BFF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CDE651C491C476DB8603E82 /* Pods-ApplicationTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HowsMyFuel.app/HowsMyFuel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTests/ApplicationTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
+				INFOPLIST_FILE = "ApplicationTests/ApplicationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -451,6 +611,15 @@
 			buildConfigurations = (
 				2715D9401701137F00FB8F5A /* Debug */,
 				2715D9411701137F00FB8F5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27B4E0FC170EF76C005BFF7E /* Build configuration list for PBXNativeTarget "ApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B4E0FA170EF76C005BFF7E /* Debug */,
+				27B4E0FB170EF76C005BFF7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

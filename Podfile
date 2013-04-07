@@ -4,4 +4,8 @@ target :UnitTests, :exclusive => true do
    pod 'Kiwi', :head
 end
 
+target :ApplicationTests, :exclusive => true do
+   pod 'Kiwi', :head
+end
+
 
