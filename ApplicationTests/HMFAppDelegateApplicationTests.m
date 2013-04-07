@@ -8,6 +8,9 @@
 
 #import "HMFAppDelegate.h"
 #import "HMFViewController.h"
+#import "HMFPresenter.h"
+#import "HMFPresenterPrivate.h"
+#import "HMFInteractor.h"
 
 #import "Kiwi.h"
 
@@ -53,16 +56,37 @@ context(@"HMFAppDelegate", ^{
             });
             
         });
-        
-        it(@"creates a view", ^{
-            [appdel application:nil didFinishLaunchingWithOptions:nil];
-            [appdel.viewController shouldNotBeNil];
+
+        context(@"Wires up the VIP architecture", ^{
+            
+            __block HMFViewController *rootView = nil;
+            
+            beforeEach(^{
+                [appdel application:nil didFinishLaunchingWithOptions:nil];
+                rootView = (HMFViewController*)appdel.window.rootViewController;
+            });
+            
+            it(@"makes the view the rootViewController", ^{
+                [[rootView should] beKindOfClass:[HMFViewController class]];
+            });
+            
+            it(@"connects the presenter to the view", ^{
+                [[rootView.presenter should] beKindOfClass:[HMFPresenter class]];
+            });
+
+            it(@"connects the view back to the presenter", ^{
+                [(NSObject*)rootView.presenter.view shouldNotBeNil];
+            });
+            
+            it(@"connects the interactor to the presenter", ^{
+                [[rootView.presenter.interactor should] beKindOfClass:[HMFInteractor class]];
+            });
+            
+            it(@"connects the presenter to the interactor delegate", ^{
+                [(NSObject*)rootView.presenter.interactor.delegate shouldNotBeNil];
+            });
         });
         
-        it(@"makes the view the rootViewController", ^{
-            [appdel application:nil didFinishLaunchingWithOptions:nil];
-            [[appdel.viewController should] equal:appdel.window.rootViewController];
-        });
         
         it(@"returns YES", ^{
             BOOL retval = [appdel application:nil didFinishLaunchingWithOptions:nil];

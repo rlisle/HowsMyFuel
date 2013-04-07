@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HMFView.h"
 
-@interface HMFViewController : UIViewController
+@class HMFPresenter;
+
+
+@interface HMFViewController : UIViewController <HMFView>
+
+@property (nonatomic, strong) HMFPresenter* presenter;
 
 @end

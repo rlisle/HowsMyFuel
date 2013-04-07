@@ -18,6 +18,10 @@
 		27468536170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
 		27A3D8DF170F316900E701D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
+		27A3D8E61711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
+		27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
+		27A3D8EA1711A1D700E701D8 /* HMFPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E91711A1D700E701D8 /* HMFPresenter.m */; };
+		27A3D8EB1711A1D700E701D8 /* HMFPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E91711A1D700E701D8 /* HMFPresenter.m */; };
 		27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F888001701111800E4CFAB /* HMFAppDelegate.m */; };
 		27B4E0ED170EF76C005BFF7E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2715D9321701137F00FB8F5A /* SenTestingKit.framework */; };
 		27B4E0EE170EF76C005BFF7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
@@ -49,6 +53,12 @@
 		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
 		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
 		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
+		27A3D8E41711A04E00E701D8 /* HMFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFInteractor.h; sourceTree = "<group>"; };
+		27A3D8E51711A04E00E701D8 /* HMFInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFInteractor.m; sourceTree = "<group>"; };
+		27A3D8E81711A1D700E701D8 /* HMFPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFPresenter.h; sourceTree = "<group>"; };
+		27A3D8E91711A1D700E701D8 /* HMFPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFPresenter.m; sourceTree = "<group>"; };
+		27A3D8EC1711A39E00E701D8 /* HMFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFView.h; sourceTree = "<group>"; };
+		27A3D8ED1711B42700E701D8 /* HMFPresenterPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFPresenterPrivate.h; sourceTree = "<group>"; };
 		27B4E0EC170EF76C005BFF7E /* ApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B4E0F2170EF76C005BFF7E /* ApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTests-Info.plist"; sourceTree = "<group>"; };
 		27B4E0F4170EF76C005BFF7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -197,6 +207,12 @@
 				27468530170E09630065BB7E /* HMFViewController.h */,
 				27468531170E09630065BB7E /* HMFViewController.m */,
 				27468532170E09630065BB7E /* HMFViewController.xib */,
+				27A3D8E41711A04E00E701D8 /* HMFInteractor.h */,
+				27A3D8E51711A04E00E701D8 /* HMFInteractor.m */,
+				27A3D8E81711A1D700E701D8 /* HMFPresenter.h */,
+				27A3D8E91711A1D700E701D8 /* HMFPresenter.m */,
+				27A3D8EC1711A39E00E701D8 /* HMFView.h */,
+				27A3D8ED1711B42700E701D8 /* HMFPresenterPrivate.h */,
 			);
 			path = HowsMyFuel;
 			sourceTree = "<group>";
@@ -400,6 +416,8 @@
 				27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */,
 				27468534170E09630065BB7E /* HMFViewController.m in Sources */,
 				27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */,
+				27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */,
+				27A3D8EB1711A1D700E701D8 /* HMFPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,8 @@
 				27F887FD1701111800E4CFAB /* main.m in Sources */,
 				27F888011701111800E4CFAB /* HMFAppDelegate.m in Sources */,
 				27468533170E09630065BB7E /* HMFViewController.m in Sources */,
+				27A3D8E61711A04E00E701D8 /* HMFInteractor.m in Sources */,
+				27A3D8EA1711A1D700E701D8 /* HMFPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
