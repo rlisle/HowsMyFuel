@@ -24,6 +24,14 @@ context(@"HMFAppDelegate", ^{
         appdel = [[HMFAppDelegate alloc]init];
     });
     
+    afterAll(^{
+        // Appears to be an Xcode bug causing "application tests did not finish"
+        // to appear in log, although console reports all test passing.
+        // Ugly workaround is to add a slight delay to the end of all tests
+        // You may need to adjust this value based on your system speed, # tests, etc.
+        [NSThread sleepForTimeInterval:0.1];    // Still occurs if 0.01
+    });
+    
     describe(@"when app launches", ^{
         
         describe(@"it creates a window", ^{
