@@ -17,6 +17,8 @@
 		27468535170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468536170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
+		2760CE1517241CF7007EFA23 /* HMFInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */; };
+		2760CE1717242084007EFA23 /* HMFPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2760CE1617242084007EFA23 /* HMFPresenterTests.m */; };
 		27A3D8DF170F316900E701D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27A3D8E61711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
 		27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
@@ -53,6 +55,8 @@
 		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
 		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
 		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
+		2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFInteractorTests.m; sourceTree = "<group>"; };
+		2760CE1617242084007EFA23 /* HMFPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFPresenterTests.m; sourceTree = "<group>"; };
 		27A3D8E41711A04E00E701D8 /* HMFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFInteractor.h; sourceTree = "<group>"; };
 		27A3D8E51711A04E00E701D8 /* HMFInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFInteractor.m; sourceTree = "<group>"; };
 		27A3D8E81711A1D700E701D8 /* HMFPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFPresenter.h; sourceTree = "<group>"; };
@@ -64,7 +68,6 @@
 		27B4E0F4170EF76C005BFF7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27B4E0F7170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMFAppDelegateApplicationTests.m; sourceTree = "<group>"; };
 		27B4E0F9170EF76C005BFF7E /* ApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
-		27BBAABE1705C3C300575315 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27F887F21701111800E4CFAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 				2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */,
 				2715D9371701137F00FB8F5A /* Supporting Files */,
 				27468538170E09A50065BB7E /* HMFViewControllerTests.m */,
+				2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */,
+				2760CE1617242084007EFA23 /* HMFPresenterTests.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -164,7 +169,6 @@
 		27F887E41701111800E4CFAB = {
 			isa = PBXGroup;
 			children = (
-				27BBAABE1705C3C300575315 /* CoreText.framework */,
 				27F887F61701111800E4CFAB /* HowsMyFuel */,
 				2715D9361701137F00FB8F5A /* UnitTests */,
 				27B4E0F0170EF76C005BFF7E /* ApplicationTests */,
@@ -418,6 +422,8 @@
 				27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */,
 				27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */,
 				27A3D8EB1711A1D700E701D8 /* HMFPresenter.m in Sources */,
+				2760CE1517241CF7007EFA23 /* HMFInteractorTests.m in Sources */,
+				2760CE1717242084007EFA23 /* HMFPresenterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
