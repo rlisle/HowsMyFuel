@@ -6,12 +6,24 @@
 //  Copyright (c) 2013 Ron Lisle. All rights reserved.
 //
 
+#import "HMFViewController.h"
 #import "Kiwi.h"
 
 SPEC_BEGIN(HMFViewControllerTests)
 
 context(@"HMFViewController", ^{
 
+    __block HMFViewController *viewController;
+    
+    beforeEach( ^{
+        viewController = [[HMFViewController alloc] init];
+    });
+
+    describe(@"initially", ^{
+        it(@"displays a mapView", ^{
+            [viewController.mapView shouldNotBeNil]
+        });
+    });
     
 });
 
