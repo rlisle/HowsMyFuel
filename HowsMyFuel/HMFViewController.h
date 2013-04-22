@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MKMapView.h>
 #import "HMFView.h"
 
 @class HMFPresenter;
@@ -15,5 +16,6 @@
 @interface HMFViewController : UIViewController <HMFView>
 
 @property (nonatomic, strong) HMFPresenter* presenter;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

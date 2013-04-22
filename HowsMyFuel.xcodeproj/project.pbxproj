@@ -16,9 +16,9 @@
 		27468534170E09630065BB7E /* HMFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468531170E09630065BB7E /* HMFViewController.m */; };
 		27468535170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
 		27468536170E09630065BB7E /* HMFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27468532170E09630065BB7E /* HMFViewController.xib */; };
-		27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
 		2760CE1517241CF7007EFA23 /* HMFInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */; };
 		2760CE1717242084007EFA23 /* HMFPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2760CE1617242084007EFA23 /* HMFPresenterTests.m */; };
+		2760CE18172566DD007EFA23 /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
 		27A3D8DF170F316900E701D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
 		27A3D8E61711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
 		27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3D8E51711A04E00E701D8 /* HMFInteractor.m */; };
@@ -54,7 +54,7 @@
 		27468530170E09630065BB7E /* HMFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFViewController.h; sourceTree = "<group>"; };
 		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
 		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
-		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
+		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMFViewControllerTests.m; path = ../UnitTests/HMFViewControllerTests.m; sourceTree = "<group>"; };
 		2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFInteractorTests.m; sourceTree = "<group>"; };
 		2760CE1617242084007EFA23 /* HMFPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFPresenterTests.m; sourceTree = "<group>"; };
 		27A3D8E41711A04E00E701D8 /* HMFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFInteractor.h; sourceTree = "<group>"; };
@@ -130,7 +130,6 @@
 			children = (
 				2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */,
 				2715D9371701137F00FB8F5A /* Supporting Files */,
-				27468538170E09A50065BB7E /* HMFViewControllerTests.m */,
 				2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */,
 				2760CE1617242084007EFA23 /* HMFPresenterTests.m */,
 			);
@@ -151,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				27B4E0F7170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m */,
+				27468538170E09A50065BB7E /* HMFViewControllerTests.m */,
 				27B4E0F1170EF76C005BFF7E /* Supporting Files */,
 			);
 			path = ApplicationTests;
@@ -419,7 +419,6 @@
 				2715D93E1701137F00FB8F5A /* HMFAppDelegateTests.m in Sources */,
 				27A70F3E1701195E00F722C6 /* HMFAppDelegate.m in Sources */,
 				27468534170E09630065BB7E /* HMFViewController.m in Sources */,
-				27468539170E09A50065BB7E /* HMFViewControllerTests.m in Sources */,
 				27A3D8E71711A04E00E701D8 /* HMFInteractor.m in Sources */,
 				27A3D8EB1711A1D700E701D8 /* HMFPresenter.m in Sources */,
 				2760CE1517241CF7007EFA23 /* HMFInteractorTests.m in Sources */,
@@ -432,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B4E0F8170EF76C005BFF7E /* HMFAppDelegateApplicationTests.m in Sources */,
+				2760CE18172566DD007EFA23 /* HMFViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

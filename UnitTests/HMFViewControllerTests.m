@@ -16,12 +16,12 @@ context(@"HMFViewController", ^{
     __block HMFViewController *viewController;
     
     beforeEach( ^{
-        viewController = [[HMFViewController alloc] init];
+        viewController = [[HMFViewController alloc] initWithNibName:@"HMFViewController" bundle:nil];
     });
 
     describe(@"initially", ^{
         it(@"displays a mapView", ^{
-            [viewController.mapView shouldNotBeNil]
+            [viewController.mapView shouldNotBeNil];
         });
     });
     
