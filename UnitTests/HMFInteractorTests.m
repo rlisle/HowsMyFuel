@@ -2,36 +2,44 @@
 //  HMFInteractorTests.m
 //  HowsMyFuel
 //
-//  Kiwi test cases for HMFInteractor
+//  OCUnit logic test cases for HMFInteractor
 //
 //  Created by Ron Lisle on 4/21/13.
 //  Copyright (c) 2013 Ron Lisle. All rights reserved.
 //
 
+#import <SenTestingKit/SenTestingKit.h>
+
 #import "HMFInteractor.h"
 
-#import "Kiwi.h"
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-SPEC_BEGIN(HMFInteractorTests)
+// Uncomment the next two lines to use OCMockito for mock objects:
+//#define MOCKITO_SHORTHAND
+//#import <OCMockitoIOS/OCMockitoIOS.h>
 
-context(@"HMFInteractor", ^{
+@interface HMFInteractorTests : SenTestCase
 
-    __block HMFInteractor *testObj;
+@property (nonatomic, strong) HMFInteractor *testObj;
 
-    beforeEach( ^{
-        testObj = [[HMFInteractor alloc] init];
-    });
+@end
 
-    describe(@"when instantiated", ^{
-        
-        specify( ^{
-            
-            [testObj shouldNotBeNil];
-            
-        });
-        
-    });
-    
-});
+@implementation HMFInteractorTests
 
-SPEC_END
+- (void)setUp
+{
+    self.testObj = [[HMFInteractor alloc] init];
+}
+
+- (void)tearDown
+{
+    self.testObj = nil;
+}
+
+- (void)testInteractorInstantiates
+{
+    assertThat(self.testObj, notNilValue());
+}
+
+@end

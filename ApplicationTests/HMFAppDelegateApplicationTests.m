@@ -1,10 +1,21 @@
 //
-//  ApplicationTests.m
-//  ApplicationTests
+//  HMFAppDelegateApplicationTests.m
+//  HowsMyFuel
+//
+//  OCUnit Application test case file for HMFAppDelegate
 //
 //  Created by Ron Lisle on 4/5/13.
 //  Copyright (c) 2013 Ron Lisle. All rights reserved.
 //
+
+#import <SenTestingKit/SenTestingKit.h>
+
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+// Uncomment the next two lines to use OCMockito for mock objects:
+//#define MOCKITO_SHORTHAND
+//#import <OCMockitoIOS/OCMockitoIOS.h>
 
 #import "HMFAppDelegate.h"
 #import "HMFViewController.h"
@@ -12,97 +23,103 @@
 #import "HMFPresenterPrivate.h"
 #import "HMFInteractor.h"
 
-#import "Kiwi.h"
+@interface HMFAppDelegateTests : SenTestCase
 
-SPEC_BEGIN(HMFAppDelegateApplicationTests)
+@property (nonatomic, strong) HMFAppDelegate *testObj;
 
-context(@"HMFAppDelegate", ^{
-    
-    __block HMFAppDelegate *appdel = nil;
-    
-    beforeEach(^{
-        appdel = [[HMFAppDelegate alloc]init];
-    });
-    
-    afterAll(^{
-        // Appears to be an Xcode bug causing "application tests did not finish"
-        // to appear in log, although console reports all test passing.
-        // Ugly workaround is to add a slight delay to the end of all tests
-        // You may need to adjust this value based on your system speed, # tests, etc.
-        [NSThread sleepForTimeInterval:0.1];    // Still occurs if 0.01
-    });
-    
-    describe(@"when app launches", ^{
-        
-        describe(@"it creates a window", ^{
-            
-            specify( ^{
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                [appdel.window shouldNotBeNil];
-                [[appdel.window should] beKindOfClass:[UIWindow class]];
-            });
-            
-            it(@"that has a white background", ^{
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                [[[appdel.window backgroundColor] should] equal: [UIColor whiteColor]];
-            });
-            
-            it(@"that is full screen", ^{
-                CGRect screen = CGRectMake(10.0, 20.0, 300.0, 400.0);
-                id screenMock = [UIScreen nullMock];
-                [[UIScreen stubAndReturn:screenMock] mainScreen];
-                [screenMock stub:@selector(bounds) andReturn:theValue(screen)];
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                BOOL rectsMatch = CGRectEqualToRect(appdel.window.frame,screen);
-                [[theValue(rectsMatch) should] beYes];
-            });
-            
-            it(@"that is Key and Visible", ^{
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                [[theValue(appdel.window.keyWindow) should] beYes];
-                [[theValue(appdel.window.isHidden) should] beNo];
-            });
-            
-        });
+@end
 
-        context(@"Wires up the VIP architecture", ^{
-            
-            __block HMFViewController *rootView = nil;
-            
-            beforeEach(^{
-                [appdel application:nil didFinishLaunchingWithOptions:nil];
-                rootView = (HMFViewController*)appdel.window.rootViewController;
-            });
-            
-            it(@"makes the view the rootViewController", ^{
-                [[rootView should] beKindOfClass:[HMFViewController class]];
-            });
-            
-            it(@"connects the presenter to the view", ^{
-                [[rootView.presenter should] beKindOfClass:[HMFPresenter class]];
-            });
+@implementation HMFAppDelegateTests
 
-            it(@"connects the view back to the presenter", ^{
-                [(NSObject*)rootView.presenter.view shouldNotBeNil];
-            });
-            
-            it(@"connects the interactor to the presenter", ^{
-                [[rootView.presenter.interactor should] beKindOfClass:[HMFInteractor class]];
-            });
-            
-            it(@"connects the presenter to the interactor delegate", ^{
-                [(NSObject*)rootView.presenter.interactor.delegate shouldNotBeNil];
-            });
-        });
-        
-        
-        it(@"returns YES", ^{
-            BOOL retval = [appdel application:nil didFinishLaunchingWithOptions:nil];
-            [[theValue(retval) should] beTrue];
-        });
-        
-    });
-    
-});
+- (void)setUp
+{
+    self.testObj = [[HMFAppDelegate alloc] init];
+}
 
-SPEC_END
+- (void)tearDown
+{
+    self.testObj = nil;
+}
+
+- (void)testAppDelegateInstantiates
+{
+    assertThat(self.testObj, notNilValue());
+}
+
+- (void)testWindowCreated
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThat(self.testObj.window, notNilValue());
+    assertThat(self.testObj.window, instanceOf([UIWindow class]));    
+}
+
+- (void)testWindowHasWhiteBackground
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThat(self.testObj.window.backgroundColor, equalTo([UIColor whiteColor]));
+}
+
+- (void)testWindowIsFullScreen
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGRect frame = self.testObj.window.frame;
+    BOOL rectsMatch = CGRectEqualToRect(screenRect, frame);
+    assertThatBool(rectsMatch, equalToBool(YES));
+}
+
+- (void)testWindowIsKey
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThatBool(self.testObj.window.keyWindow, equalToBool(YES));
+}
+
+- (void)testWindowIsVisible
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThatBool(self.testObj.window.isHidden, equalToBool(NO));
+}
+
+#pragma mark - VIP object graph
+
+- (void)testMakesViewControllerRootViewController
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThat(self.testObj.window.rootViewController, instanceOf([HMFViewController class]));
+}
+
+- (void)testPresenterConnectedToView
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    HMFViewController *rootView = (HMFViewController *)self.testObj.window.rootViewController;
+    assertThat(rootView.presenter, instanceOf([HMFPresenter class]));
+}
+
+- (void)testViewConnectedBackToPresenter
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    HMFViewController *rootView = (HMFViewController *)self.testObj.window.rootViewController;
+    assertThat(rootView.presenter.view, notNilValue());
+}
+
+- (void)testInteractorConnectedToPresenter
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    HMFViewController *rootView = (HMFViewController *)self.testObj.window.rootViewController;
+    assertThat(rootView.presenter.interactor, instanceOf([HMFInteractor class]));
+}
+
+- (void)testPresenterIsInteractorDelegate
+{
+    [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    HMFViewController *rootView = (HMFViewController *)self.testObj.window.rootViewController;
+    assertThat(rootView.presenter.interactor.delegate, notNilValue());
+}
+
+- (void)testApplicationDidFinishLaunchingReturnsYes
+{
+    BOOL retVal = [self.testObj application:nil didFinishLaunchingWithOptions:nil];
+    assertThatBool(retVal, equalToBool(YES));
+}
+
+@end
