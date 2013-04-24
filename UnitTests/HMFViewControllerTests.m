@@ -16,6 +16,9 @@
 //#define MOCKITO_SHORTHAND
 //#import <OCMockitoIOS/OCMockitoIOS.h>
 
+#import <MapKit/MKUserLocation.h>
+#import <MapKit/MKTypes.h>
+
 #import "HMFViewController.h"
 
 @interface HMFViewControllerTests : SenTestCase
@@ -50,6 +53,12 @@
 - (void)testMapShowsUserLocation
 {
     assertThatBool(self.testObj.mapView.showsUserLocation, equalToBool(YES));
+}
+
+- (void)testUserPositionIsCenteredOnDisplay
+{
+    MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
+    STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
 }
 
 @end
