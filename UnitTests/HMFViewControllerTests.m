@@ -57,6 +57,7 @@
 
 - (void)testUserPositionIsCenteredOnDisplay
 {
+    [self.testObj viewDidLoad];
     MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
     STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
 }
