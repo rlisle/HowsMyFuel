@@ -57,7 +57,7 @@
 		27468530170E09630065BB7E /* HMFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFViewController.h; sourceTree = "<group>"; };
 		27468531170E09630065BB7E /* HMFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewController.m; sourceTree = "<group>"; };
 		27468532170E09630065BB7E /* HMFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFViewController.xib; sourceTree = "<group>"; };
-		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMFViewControllerTests.m; path = ../UnitTests/HMFViewControllerTests.m; sourceTree = "<group>"; };
+		27468538170E09A50065BB7E /* HMFViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFViewControllerTests.m; sourceTree = "<group>"; };
 		2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFInteractorTests.m; sourceTree = "<group>"; };
 		2760CE1617242084007EFA23 /* HMFPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFPresenterTests.m; sourceTree = "<group>"; };
 		27A3D8E41711A04E00E701D8 /* HMFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFInteractor.h; sourceTree = "<group>"; };
