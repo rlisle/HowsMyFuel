@@ -45,6 +45,8 @@
     assertThat(self.testObj, notNilValue());
 }
 
+#pragma mark - MapView
+
 - (void)testDisplaysMapView
 {
     assertThat(self.testObj.mapView, notNilValue());
@@ -60,6 +62,31 @@
     [self.testObj viewDidLoad];
     MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
     STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
+}
+
+#pragma mark - Gestures
+
+- (void)testThatTapRecentersMap
+{
+    [self.testObj viewDidLoad];
+    
+    // Test that map has a tap recognizer
+    MKMapView *map = self.testObj.mapView;
+    NSArray *gestureRecognizers = [map gestureRecognizers];
+    assertThat(gestureRecognizers, notNilValue());
+    assertThat(gestureRecognizers, isNot(empty()));
+    UIGestureRecognizer *tapRecognizer = gestureRecognizers[0];
+    assertThat(tapRecognizer, instanceOf([UITapGestureRecognizer class]));
+    
+    // ... and that it is connected to handleTap
+    // Note: don't see how to do this.
+    
+    // Test that handleTap recenters the map
+    map.userTrackingMode = MKUserTrackingModeNone;
+    [self.testObj handleTap];
+    MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
+    STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
+    
 }
 
 @end
