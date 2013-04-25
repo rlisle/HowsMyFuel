@@ -11,13 +11,14 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #import "HMFPresenter.h"
+#import "HMFPresenterPrivate.h"
+#import "HMFViewController.h"
 
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-// Uncomment the next two lines to use OCMockito for mock objects:
-//#define MOCKITO_SHORTHAND
-//#import <OCMockitoIOS/OCMockitoIOS.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
 
 @interface HMFPresenterTests : SenTestCase
 
@@ -40,6 +41,16 @@
 - (void)testPresenterInstantiates
 {
     assertThat(self.testObj, notNilValue());
+}
+
+- (void)testThatMapTapRecentersMap
+{
+    HMFViewController *mockVC = mock([HMFViewController class]);
+    self.testObj.view = mockVC;
+    
+    [self.testObj handleMapTap];
+    
+    [verify(mockVC) centerMapOnUser];
 }
 
 @end

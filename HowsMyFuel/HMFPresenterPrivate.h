@@ -10,6 +10,7 @@
 
 @interface HMFPresenter ()
 
-@property (nonatomic, strong) id<HMFView>   view;
+@property (nonatomic, weak) id<HMFView>   view;
 @property (nonatomic, strong) HMFInteractor* interactor;
+
 @end
