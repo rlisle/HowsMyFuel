@@ -37,7 +37,7 @@
 
 - (void)configureMapSettings
 {
-    [[self mapView]setUserTrackingMode:MKUserTrackingModeFollow];
+    [self centerMapOnUser];
 }
 
 - (void)setupGestureRecognizers
@@ -48,10 +48,14 @@
 }
 
 - (void)handleMapTap:(UIGestureRecognizer *)sender {
-//    if(sender.state == UIGestureRecognizerStateEnded){
-//        NSLog(@"Tap");
+    if(sender.state == UIGestureRecognizerStateEnded){
         [[self mapView]setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-//    }
+    }
+}
+
+- (void)centerMapOnUser
+{
+    [[self mapView]setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
 }
 
 @end

@@ -56,16 +56,16 @@
     assertThatBool(self.testObj.mapView.showsUserLocation, equalToBool(YES));
 }
 
-- (void)testUserPositionIsCenteredOnDisplay
+- (void)testCenterMapOnUser
 {
-    [self.testObj viewDidLoad];
+    [self.testObj centerMapOnUser];
     MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
     STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
 }
 
 #pragma mark - Gestures
 
-- (void)testThatTapRecentersMap
+- (void)testMapTapRecognizer
 {
     [self.testObj viewDidLoad];
     
@@ -79,17 +79,6 @@
     
     // ... and that it is connected to handleTap
     // Note: don't see how to do this.
-    
-    // Test that handleTap recenters the map
-    map.userTrackingMode = MKUserTrackingModeNone;
-    
-//    UITapGestureRecognizer *mock = mockClass([UITapGestureRecognizer class]);
-//    UIGestureRecognizerState gestureState = UIGestureRecognizerStateEnded;
-//    [given([mock state]) willReturnInt:gestureState];
-    
-    [self.testObj handleMapTap:nil];
-    MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
-    STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
     
 }
 

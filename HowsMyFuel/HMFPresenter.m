@@ -23,4 +23,10 @@
 	
 	return self;
 }
+
+- (void)handleMapTap
+{
+    [self.view centerMapOnUser];
+}
+
 @end

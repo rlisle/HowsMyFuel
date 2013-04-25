@@ -10,4 +10,6 @@
 
 @protocol HMFView <NSObject>
 
+- (void)centerMapOnUser;
+
 @end

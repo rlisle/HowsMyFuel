@@ -14,4 +14,6 @@
 
 - (id)initWithView:(id<HMFView>)view interactor:(HMFInteractor*)interactor;
 
+- (void)handleMapTap;
+
 @end
