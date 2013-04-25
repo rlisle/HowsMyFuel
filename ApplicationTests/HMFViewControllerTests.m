@@ -12,9 +12,8 @@
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-// Uncomment the next two lines to use OCMockito for mock objects:
-//#define MOCKITO_SHORTHAND
-//#import <OCMockitoIOS/OCMockitoIOS.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
 
 #import <MapKit/MKUserLocation.h>
 #import <MapKit/MKTypes.h>
@@ -83,7 +82,12 @@
     
     // Test that handleTap recenters the map
     map.userTrackingMode = MKUserTrackingModeNone;
-    [self.testObj handleTap];
+    
+//    UITapGestureRecognizer *mock = mockClass([UITapGestureRecognizer class]);
+//    UIGestureRecognizerState gestureState = UIGestureRecognizerStateEnded;
+//    [given([mock state]) willReturnInt:gestureState];
+    
+    [self.testObj handleMapTap:nil];
     MKUserTrackingMode mode = self.testObj.mapView.userTrackingMode;
     STAssertEquals(mode,MKUserTrackingModeFollow,@"mode not MKUserTrackingModeFollow");
     
