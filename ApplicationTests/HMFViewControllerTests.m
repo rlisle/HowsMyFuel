@@ -89,7 +89,7 @@
     assertThat(self.testObj.timeView, notNilValue());
 }
 
-- (void)testTimeText
+- (void)testTimeTextDisplay
 {
     self.testObj.timeText = @"12:34";
     NSString *readValue = self.testObj.timeView.text;

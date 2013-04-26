@@ -35,6 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Map
+
 - (void)configureMapSettings
 {
     [self centerMapOnUser];
@@ -56,6 +58,17 @@
 - (void)centerMapOnUser
 {
     [[self mapView]setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+}
+
+#pragma mark - Time
+
+- (void)setTimeText:(NSString *)timeText
+{
+    self.timeView.text = timeText;
+}
+- (NSString *)timeText
+{
+    return self.timeView.text;
 }
 
 @end

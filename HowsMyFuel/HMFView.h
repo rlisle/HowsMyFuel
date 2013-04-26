@@ -10,6 +10,8 @@
 
 @protocol HMFView <NSObject>
 
+@property (copy, nonatomic) NSString *timeText;
+
 - (void)centerMapOnUser;
 
 @end
