@@ -9,6 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HMFTime.h"
 
 @protocol HMFInteractorDelegate <NSObject>
 
@@ -16,4 +17,6 @@
 
 @interface HMFInteractor : NSObject
 @property (nonatomic, assign) id<HMFInteractorDelegate> delegate;
+@property (readonly, strong, nonatomic) HMFTime *time;
+
 @end

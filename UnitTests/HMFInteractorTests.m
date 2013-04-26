@@ -46,7 +46,7 @@
 
 - (void)testTimeModelInstantiated
 {
-    assertThat(self.time, notNilValue());
+    assertThat(self.testObj.time, notNilValue());
 }
 
 @end

@@ -14,4 +14,15 @@
 
 @implementation HMFInteractor
 
+@synthesize time = _time;   // Readonly
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _time = [[HMFTime alloc] init];
+    }
+    return self;
+}
+
 @end

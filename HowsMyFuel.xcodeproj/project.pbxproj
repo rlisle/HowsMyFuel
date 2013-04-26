@@ -36,6 +36,9 @@
 		27E6F6201725DFB0009E35E1 /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E6F61D1725DF9D009E35E1 /* OCMockitoIOS.framework */; };
 		27F45E95172803FD00FF6501 /* HMFViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468538170E09A50065BB7E /* HMFViewControllerTests.m */; };
 		27F45E971728125400FF6501 /* HMFAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2715D93D1701137F00FB8F5A /* HMFAppDelegateTests.m */; };
+		27F45E9B172AAE1300FF6501 /* HMFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F45E9A172AAE1300FF6501 /* HMFTime.m */; };
+		27F45E9C172AAE1300FF6501 /* HMFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F45E9A172AAE1300FF6501 /* HMFTime.m */; };
+		27F45E9E172AAE5500FF6501 /* HMFTimeTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F45E9D172AAE5500FF6501 /* HMFTimeTestsTests.m */; };
 		27F887F11701111800E4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F01701111800E4CFAB /* UIKit.framework */; };
 		27F887F31701111800E4CFAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F21701111800E4CFAB /* Foundation.framework */; };
 		27F887F51701111800E4CFAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F887F41701111800E4CFAB /* CoreGraphics.framework */; };
@@ -73,6 +76,9 @@
 		27E6F61817256DA2009E35E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		27E6F61B1725DF8E009E35E1 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = "Frameworks/OCHamcrest-2.0.0/OCHamcrestIOS.framework"; sourceTree = "<group>"; };
 		27E6F61D1725DF9D009E35E1 /* OCMockitoIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockitoIOS.framework; path = "Frameworks/OCMockito-0.23/OCMockitoIOS.framework"; sourceTree = "<group>"; };
+		27F45E99172AAE1300FF6501 /* HMFTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMFTime.h; path = models/HMFTime.h; sourceTree = "<group>"; };
+		27F45E9A172AAE1300FF6501 /* HMFTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMFTime.m; path = models/HMFTime.m; sourceTree = "<group>"; };
+		27F45E9D172AAE5500FF6501 /* HMFTimeTestsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFTimeTestsTests.m; sourceTree = "<group>"; };
 		27F887ED1701111800E4CFAB /* HowsMyFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsMyFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F887F01701111800E4CFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27F887F21701111800E4CFAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +143,7 @@
 				2715D9371701137F00FB8F5A /* Supporting Files */,
 				2760CE1417241CF7007EFA23 /* HMFInteractorTests.m */,
 				2760CE1617242084007EFA23 /* HMFPresenterTests.m */,
+				27F45E9D172AAE5500FF6501 /* HMFTimeTestsTests.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -173,6 +180,8 @@
 		27F45E98172AAD7B00FF6501 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				27F45E99172AAE1300FF6501 /* HMFTime.h */,
+				27F45E9A172AAE1300FF6501 /* HMFTime.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -404,6 +413,8 @@
 				2760CE1517241CF7007EFA23 /* HMFInteractorTests.m in Sources */,
 				2760CE1717242084007EFA23 /* HMFPresenterTests.m in Sources */,
 				27F45E971728125400FF6501 /* HMFAppDelegateTests.m in Sources */,
+				27F45E9C172AAE1300FF6501 /* HMFTime.m in Sources */,
+				27F45E9E172AAE5500FF6501 /* HMFTimeTestsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +435,7 @@
 				27468533170E09630065BB7E /* HMFViewController.m in Sources */,
 				27A3D8E61711A04E00E701D8 /* HMFInteractor.m in Sources */,
 				27A3D8EA1711A1D700E701D8 /* HMFPresenter.m in Sources */,
+				27F45E9B172AAE1300FF6501 /* HMFTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
