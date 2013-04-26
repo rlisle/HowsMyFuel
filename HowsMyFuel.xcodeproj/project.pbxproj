@@ -170,6 +170,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		27F45E98172AAD7B00FF6501 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		27F887E41701111800E4CFAB = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +215,7 @@
 		27F887F61701111800E4CFAB /* HowsMyFuel */ = {
 			isa = PBXGroup;
 			children = (
+				27F45E98172AAD7B00FF6501 /* Models */,
 				27F887FF1701111800E4CFAB /* HMFAppDelegate.h */,
 				27F888001701111800E4CFAB /* HMFAppDelegate.m */,
 				27F887F71701111800E4CFAB /* Supporting Files */,

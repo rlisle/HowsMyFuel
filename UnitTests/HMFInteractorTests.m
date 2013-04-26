@@ -42,4 +42,11 @@
     assertThat(self.testObj, notNilValue());
 }
 
+#pragma mark - Time
+
+- (void)testTimeModelInstantiated
+{
+    assertThat(self.time, notNilValue());
+}
+
 @end
