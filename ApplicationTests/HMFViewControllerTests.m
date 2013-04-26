@@ -89,4 +89,11 @@
     assertThat(self.testObj.timeView, notNilValue());
 }
 
+- (void)testTimeText
+{
+    self.testObj.timeText = @"12:34";
+    NSString *readValue = self.testObj.timeView.text;
+    assertThat(readValue, is(@"12:34"));
+}
+
 @end
