@@ -96,4 +96,13 @@
     assertThat(readValue, is(@"12:34"));
 }
 
+- (void)testTimeTextDisplayIsCopiedNotReferenced
+{
+    NSString *testText = @"12:34";
+    self.testObj.timeText = testText;
+    testText = @"10:56";
+    NSString *readValue = self.testObj.timeView.text;
+    assertThat(readValue, is(@"12:34"));
+}
+
 @end
