@@ -84,7 +84,7 @@
 
 #pragma mark - Time display
 
-- (void)testDisplaysTime
+- (void)testDisplaysTimeView
 {
     assertThat(self.testObj.timeView, notNilValue());
 }

@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) HMFPresenter* presenter;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *timeView;
 
 - (void)handleMapTap:(UIGestureRecognizer *)sender;
 
