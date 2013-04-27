@@ -10,4 +10,6 @@
 
 @interface HMFTime : NSObject
 
+@property (strong, nonatomic) NSTimer *timer;
+
 @end

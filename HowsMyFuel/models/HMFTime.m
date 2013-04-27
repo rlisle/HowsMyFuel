@@ -10,4 +10,25 @@
 
 @implementation HMFTime
 
+- (id)init
+{
+    self = [super init];
+    if (self != nil) {
+        [self startClockTimer];
+    }
+    return self;
+}
+
+- (void)startClockTimer {
+    [self setTimer:[NSTimer scheduledTimerWithTimeInterval:1.0
+                                                    target:self
+                                                  selector:@selector(handleClockTimer)
+                                                  userInfo:nil
+                                                   repeats:YES]];
+}
+
+- (void)handleClockTimer {
+    
+}
+
 @end
