@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol HMFTimeUpdate <NSObject>
+- (void)updatedTimeString:(NSString *)timeString;
+@end
+
 @interface HMFTime : NSObject
 
+@property (strong, nonatomic) id <HMFTimeUpdate> delegate;
 @property (strong, nonatomic) NSTimer *timer;
 
 @end

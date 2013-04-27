@@ -28,7 +28,9 @@
 }
 
 - (void)handleClockTimer {
-    
+    if (self.delegate){
+        [self.delegate updatedTimeString:nil];
+    }
 }
 
 @end

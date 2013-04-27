@@ -19,7 +19,7 @@
 
 #import "HMFTime.h"
 
-@interface HMFTimeTests : SenTestCase
+@interface HMFTimeTests : SenTestCase <HMFTimeUpdate>
 
 @property (nonatomic, strong) HMFTime *testObj;
 @property BOOL updatedTimeStringWasCalled;
@@ -54,6 +54,7 @@
 - (void)testThatDelegateIsCalledWhenTimerFires
 {
     self.testObj.delegate = self;
+    [self.testObj.timer fire];
     assertThatBool(self.updatedTimeStringWasCalled, equalToBool(YES));
 }
 
