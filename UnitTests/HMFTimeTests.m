@@ -22,6 +22,7 @@
 @interface HMFTimeTests : SenTestCase
 
 @property (nonatomic, strong) HMFTime *testObj;
+@property BOOL updatedTimeStringWasCalled;
 
 @end
 
@@ -30,6 +31,7 @@
 - (void)setUp
 {
     self.testObj = [[HMFTime alloc] init];
+    self.updatedTimeStringWasCalled = NO;
 }
 
 - (void)tearDown
@@ -44,10 +46,20 @@
 
 - (void)testHMFTimeCreates1SecondRecurringTimer
 {
-    NSTimer *t = self.testObj.timer;
     assertThat(self.testObj.timer, notNilValue());
     assertThatBool(self.testObj.timer.isValid, equalToBool(YES));
     assertThatDouble(self.testObj.timer.timeInterval, equalToDouble(1.0));
+}
+
+- (void)testThatDelegateIsCalledWhenTimerFires
+{
+    self.testObj.delegate = self;
+    assertThatBool(self.updatedTimeStringWasCalled, equalToBool(YES));
+}
+
+- (void)updatedTimeString:(NSString *)timeString
+{
+    self.updatedTimeStringWasCalled = YES;
 }
 
 @end
