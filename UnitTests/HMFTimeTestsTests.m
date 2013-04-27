@@ -42,6 +42,12 @@
     assertThat(self.testObj, notNilValue());
 }
 
-// Implement additional tests
+- (void)testHMFTimeCreates1SecondRecurringTimer
+{
+    NSTimer *t = self.testObj.timer;
+    assertThat(self.testObj.timer, notNilValue());
+    assertThatBool(self.testObj.timer.isValid, equalToBool(YES));
+    assertThatDouble(self.testObj.timer.timeInterval, equalToDouble(1.0));
+}
 
 @end
