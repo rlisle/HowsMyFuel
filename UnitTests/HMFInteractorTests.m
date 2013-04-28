@@ -56,6 +56,10 @@
 
 - (void)testTimeForwardedToPresenter
 {
+    // Create fake presenter to verify presenter is called
+    
+    // Simulate delegate call from time
+    
     STFail(@"Test for forwarding time to presenter not implemented yet");
 }
 
