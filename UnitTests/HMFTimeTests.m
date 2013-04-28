@@ -23,6 +23,7 @@
 
 @property (nonatomic, strong) HMFTime *testObj;
 @property BOOL updatedTimeStringWasCalled;
+@property (nonatomic, copy) NSString *updatedTime;
 
 @end
 
@@ -31,6 +32,7 @@
 - (void)setUp
 {
     self.testObj = [[HMFTime alloc] init];
+    self.testObj.delegate = self;
     self.updatedTimeStringWasCalled = NO;
 }
 
@@ -53,14 +55,23 @@
 
 - (void)testThatDelegateIsCalledWhenTimerFires
 {
-    self.testObj.delegate = self;
     [self.testObj.timer fire];
     assertThatBool(self.updatedTimeStringWasCalled, equalToBool(YES));
 }
 
+- (void)testUpdatedTimeStringFormattedCorrectly
+{
+    NSString *expectedString = @"12:34";
+    [self.testObj.timer fire];
+    assertThat(self.updatedTime, is(expectedString));
+}
+
+#pragma mark - HMFTimeUpdate delegate methods
+
 - (void)updatedTimeString:(NSString *)timeString
 {
     self.updatedTimeStringWasCalled = YES;
+    self.updatedTime = timeString;
 }
 
 @end
