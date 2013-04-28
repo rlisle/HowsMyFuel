@@ -49,9 +49,14 @@
     assertThat(self.testObj.time, notNilValue());
 }
 
-- (void)testTimeUpdatesPresenter
+- (void)testTimeDelegateConnected
 {
-    STFail(@"Not implemented yet");
+    STFail(@"Test for connecting time delegate not implemented yet");
+}
+
+- (void)testTimeForwardedToPresenter
+{
+    STFail(@"Test for forwarding time to presenter not implemented yet");
 }
 
 @end
