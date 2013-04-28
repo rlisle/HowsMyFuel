@@ -51,7 +51,7 @@
 
 - (void)testTimeDelegateConnected
 {
-    STFail(@"Test for connecting time delegate not implemented yet");
+    assertThat(self.testObj.time.delegate, is(self.testObj));
 }
 
 - (void)testTimeForwardedToPresenter
