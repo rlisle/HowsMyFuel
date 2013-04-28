@@ -17,4 +17,6 @@
 @property (strong, nonatomic) id <HMFTimeUpdate> delegate;
 @property (strong, nonatomic) NSTimer *timer;
 
+- (NSString *)formatTimeString:(NSDate*)now;
+
 @end

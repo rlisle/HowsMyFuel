@@ -59,11 +59,12 @@
     assertThatBool(self.updatedTimeStringWasCalled, equalToBool(YES));
 }
 
-- (void)testUpdatedTimeStringFormattedCorrectly
+- (void)testFormatTimeString
 {
     NSString *expectedString = @"12:34";
-    [self.testObj.timer fire];
-    assertThat(self.updatedTime, is(expectedString));
+    NSDate *testDate = [NSDate dateWithTimeIntervalSince1970:412440.0];
+    NSString *formattedString = [self.testObj formatTimeString:testDate];
+    assertThat(formattedString, is(expectedString));
 }
 
 #pragma mark - HMFTimeUpdate delegate methods

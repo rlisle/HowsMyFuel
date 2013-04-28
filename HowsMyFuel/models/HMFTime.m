@@ -29,8 +29,19 @@
 
 - (void)handleClockTimer {
     if (self.delegate){
-        [self.delegate updatedTimeString:nil];
+        NSDate *now = [NSDate date];
+        NSString *timeString = [self formatTimeString:now];
+        [self.delegate updatedTimeString:timeString];
     }
+}
+
+- (NSString *)formatTimeString:(NSDate*)now {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setAMSymbol:@""];
+    [formatter setPMSymbol:@""];
+    NSString * formattedTimeString = [formatter stringFromDate:now];
+    return [formattedTimeString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 @end
