@@ -49,4 +49,9 @@
     assertThat(self.testObj.time, notNilValue());
 }
 
+- (void)testTimeUpdatesPresenter
+{
+    STFail(@"Not implemented yet");
+}
+
 @end
