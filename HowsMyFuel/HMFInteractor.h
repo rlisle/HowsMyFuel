@@ -15,7 +15,7 @@
 
 @end
 
-@interface HMFInteractor : NSObject
+@interface HMFInteractor : NSObject <HMFTimeUpdate>
 @property (nonatomic, assign) id<HMFInteractorDelegate> delegate;
 @property (readonly, strong, nonatomic) HMFTime *time;
 

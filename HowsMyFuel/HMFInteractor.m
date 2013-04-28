@@ -21,8 +21,14 @@
     self = [super init];
     if (self) {
         _time = [[HMFTime alloc] init];
+        _time.delegate = self;
     }
     return self;
+}
+
+- (void)updatedTimeString:(NSString *)timeString
+{
+    NSLog(@"Presenter time delegate called: %@",timeString);
 }
 
 @end
