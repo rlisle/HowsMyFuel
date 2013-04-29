@@ -82,6 +82,15 @@
     
 }
 
+#pragma mark - Background
+
+- (void)testDisplayTopBackgroundColor
+{
+    UIColor *bgColor = self.testObj.view.backgroundColor;
+    UIColor *expectedColor = [UIColor colorWithRed:1.0 green:0.97 blue:0.92 alpha:1.0];
+    assertThat(bgColor, equalTo(expectedColor));
+}
+
 #pragma mark - Time display
 
 - (void)testDisplaysTimeView
