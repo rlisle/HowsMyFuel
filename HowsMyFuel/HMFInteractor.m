@@ -22,6 +22,7 @@
     if (self) {
         _time = [[HMFTime alloc] init];
         _time.delegate = self;
+        _weather = [[HMFWeather alloc]init];
     }
     return self;
 }
