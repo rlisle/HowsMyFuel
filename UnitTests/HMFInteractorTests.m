@@ -11,13 +11,13 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #import "HMFInteractor.h"
+#import "HMFPresenter.h"
 
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-// Uncomment the next two lines to use OCMockito for mock objects:
-//#define MOCKITO_SHORTHAND
-//#import <OCMockitoIOS/OCMockitoIOS.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
 
 @interface HMFInteractorTests : SenTestCase
 
@@ -57,10 +57,13 @@
 - (void)testTimeForwardedToPresenter
 {
     // Create fake presenter to verify presenter is called
+    id <HMFInteractorDelegate> mockPresenter = mockProtocol(@protocol(HMFInteractorDelegate));
+    self.testObj.delegate = mockPresenter;
     
     // Simulate delegate call from time
+    [self.testObj.time.timer fire];
     
-    STFail(@"Test for forwarding time to presenter not implemented yet");
+    [verify(mockPresenter) updateTimeString:(id)notNilValue()];
 }
 
 @end

@@ -29,6 +29,9 @@
 - (void)updatedTimeString:(NSString *)timeString
 {
     NSLog(@"Presenter time delegate called: %@",timeString);
+    if (self.delegate) {
+        [self.delegate updateTimeString:timeString];
+    }
 }
 
 @end

@@ -13,6 +13,8 @@
 
 @protocol HMFInteractorDelegate <NSObject>
 
+- (void)updateTimeString:(NSString *)timeString;
+
 @end
 
 @interface HMFInteractor : NSObject <HMFTimeUpdate>

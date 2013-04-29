@@ -29,4 +29,9 @@
     [self.view centerMapOnUser];
 }
 
+- (void)updateTimeString:(NSString *)timeString
+{
+    
+}
+
 @end
