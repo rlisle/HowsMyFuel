@@ -66,4 +66,11 @@
     [verify(mockPresenter) updateTimeString:(id)notNilValue()];
 }
 
+#pragma mark - Weather
+
+- (void)testWeatherModelInstantiated
+{
+    assertThat(self.testObj.weather, notNilValue());
+}
+
 @end
