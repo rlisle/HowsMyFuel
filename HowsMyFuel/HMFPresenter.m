@@ -31,7 +31,7 @@
 
 - (void)updateTimeString:(NSString *)timeString
 {
-    
+    [_view updateTimeString:timeString];
 }
 
 @end
