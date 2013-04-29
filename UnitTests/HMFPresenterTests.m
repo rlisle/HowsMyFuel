@@ -53,4 +53,17 @@
     [verify(mockVC) centerMapOnUser];
 }
 
+- (void)testThatTimePassedToViewController
+{
+    // Create fake viewController to verify it is called
+    id <HMFView> mockVC = mockProtocol(@protocol(HMFView));
+    self.testObj.view = mockVC;
+    
+    // Simulate delegate call from Interactor
+    [self.testObj updateTimeString:@"12:34"];
+    
+    [verify(mockVC) updateTimeString:(id)notNilValue()];
+
+}
+
 @end

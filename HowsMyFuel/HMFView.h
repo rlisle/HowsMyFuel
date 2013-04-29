@@ -13,5 +13,7 @@
 @property (copy, nonatomic) NSString *timeText;
 
 - (void)centerMapOnUser;
+- (void)updateTimeString:(NSString *)timeString;
+
 
 @end
