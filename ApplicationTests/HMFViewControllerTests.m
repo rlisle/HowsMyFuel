@@ -115,7 +115,7 @@
 - (void)testThatTimeIsInitiallyBlank
 {
     NSString *readValue = self.testObj.timeView.text;
-    assertThat(readValue, isNot(@"Label"));
+    assertThat(readValue, is(@""));
 }
 
 @end
