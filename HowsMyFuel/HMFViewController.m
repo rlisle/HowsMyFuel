@@ -24,10 +24,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.97 blue:0.92 alpha:1.0];
+    [self setBackgroundColor];
     [self configureMapSettings];
     [self setupGestureRecognizers];
+}
+
+- (void)setBackgroundColor
+{
+    // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.97 blue:0.92 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning
