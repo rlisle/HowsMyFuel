@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HMFTime.h"
+#import "HMFWeather.h"
 
 @protocol HMFInteractorDelegate <NSObject>
 
@@ -18,7 +19,8 @@
 @end
 
 @interface HMFInteractor : NSObject <HMFTimeUpdate>
-@property (nonatomic, assign) id<HMFInteractorDelegate> delegate;
-@property (readonly, strong, nonatomic) HMFTime *time;
+@property (assign, nonatomic) id<HMFInteractorDelegate> delegate;
+@property (readonly, strong) HMFTime *time;
+@property (strong, nonatomic) HMFWeather *weather;
 
 @end
