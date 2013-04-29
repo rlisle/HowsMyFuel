@@ -476,7 +476,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/Frameworks/*\"",
+					"\"$(SRCROOT)/Frameworks\"",
 					"\"$(SRCROOT)/Frameworks/OCHamcrest-2.0.0\"",
 					"\"$(SRCROOT)/Frameworks/OCMockito-0.23\"/**",
 				);
@@ -496,7 +496,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/Frameworks/*\"",
+					"\"$(SRCROOT)/Frameworks\"",
 					"\"$(SRCROOT)/Frameworks/OCHamcrest-2.0.0\"",
 					"\"$(SRCROOT)/Frameworks/OCMockito-0.23\"/**",
 				);
