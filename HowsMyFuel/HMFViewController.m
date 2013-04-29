@@ -71,4 +71,9 @@
     return self.timeView.text;
 }
 
+- (void)updateTimeString:(NSString *)timeString
+{
+    
+}
+
 @end

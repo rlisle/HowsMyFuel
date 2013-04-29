@@ -105,4 +105,11 @@
     assertThat(readValue, is(@"12:34"));
 }
 
+- (void)testUpdateTimeString
+{
+    [self.testObj updateTimeString:@"11:23"];
+    NSString *readValue = self.testObj.timeView.text;
+    assertThat(readValue, is(@"11:23"));
+}
+
 @end
