@@ -73,7 +73,7 @@
 
 - (void)updateTimeString:(NSString *)timeString
 {
-    
+    self.timeText = timeString;
 }
 
 @end
