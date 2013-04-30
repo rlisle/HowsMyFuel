@@ -87,5 +87,15 @@
     assertThatBool(self.testObj.pending, equalToBool(YES));
 }
 
+- (void)testUpdateSetsPending
+{
+    [self.testObj update];
+    assertThatBool(self.testObj.pending, equalToBool(YES));
+}
+
+- (void)testDefaultZipcode
+{
+    assertThatInt(self.testObj.zipcode, equalToInt(78724));
+}
 
 @end

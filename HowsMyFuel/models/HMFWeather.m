@@ -8,6 +8,8 @@
 
 #import "HMFWeather.h"
 
+#define kDEFAULT_ZIPCODE    78724
+
 @implementation HMFWeather
 
 @synthesize zipcode = _zipcode;
