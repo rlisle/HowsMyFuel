@@ -13,9 +13,8 @@
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-// Uncomment the next two lines to use OCMockito for mock objects:
-//#define MOCKITO_SHORTHAND
-//#import <OCMockitoIOS/OCMockitoIOS.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
 
 #define kDEFAULT_ZIPCODE    78724
 
@@ -96,6 +95,15 @@
 - (void)testDefaultZipcode
 {
     assertThatInt(self.testObj.zipcode, equalToInt(78724));
+}
+
+- (void)testSetWeatherKeyFromUserDefaults
+{
+    // Instead of a bunch of mocking, we'll just verify
+    // that the key exists, and that it's loaded by the weather object
+    NSString *key = [[NSUserDefaults standardUserDefaults] stringForKey:@"weather_key"];
+    assertThat(key, notNilValue());
+    assertThat(self.testObj.key, equalTo(key));
 }
 
 @end
