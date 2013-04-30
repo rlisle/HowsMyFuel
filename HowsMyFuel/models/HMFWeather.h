@@ -10,7 +10,9 @@
 
 @interface HMFWeather : NSObject
 
-@property BOOL pending;
+@property float temperature;
 @property int zipcode;
+@property BOOL pending;
+@property (nonatomic, copy) NSString *imageUrl;
 
 @end
