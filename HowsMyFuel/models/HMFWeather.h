@@ -10,4 +10,7 @@
 
 @interface HMFWeather : NSObject
 
+@property BOOL pending;
+@property int zipcode;
+
 @end

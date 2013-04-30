@@ -17,7 +17,7 @@
 //#define MOCKITO_SHORTHAND
 //#import <OCMockitoIOS/OCMockitoIOS.h>
 
-#define kDEFAULT_ZIPCODE    @"78724"
+#define kDEFAULT_ZIPCODE    78724
 
 #import "HMFWeather.h"
 
@@ -62,7 +62,7 @@
 - (void)testPendingSetUntilRequestCompletes
 {
     assertThatBool(self.testObj.pending, equalToBool(YES));
-    [self.testObj updateWeatherForZipcode:kDEFAULT_ZIPCODE];
+    self.testObj.zipcode = kDEFAULT_ZIPCODE;
     assertThatBool(self.testObj.pending, equalToBool(NO));
 }
 
