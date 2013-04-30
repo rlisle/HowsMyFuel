@@ -15,6 +15,8 @@
 @property BOOL pending;
 @property (nonatomic, copy) NSString *imageUrl;
 
+@property (nonatomic, copy) NSString *key;
+
 - (void)update;
 
 @end

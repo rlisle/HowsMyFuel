@@ -19,9 +19,15 @@
     self = [super init];
     if (self) {
         _zipcode = kDEFAULT_ZIPCODE;
+        [self setWeatherKeyFromUserDefaults];
         self.pending = YES;
     }
     return self;
+}
+
+- (void)setWeatherKeyFromUserDefaults
+{
+    self.key = [[NSUserDefaults standardUserDefaults] stringForKey:@"weather_key"];
 }
 
 - (int)zipcode
