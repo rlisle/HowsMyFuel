@@ -17,6 +17,8 @@
 //#define MOCKITO_SHORTHAND
 //#import <OCMockitoIOS/OCMockitoIOS.h>
 
+#define kDEFAULT_ZIPCODE    @"78724"
+
 #import "HMFWeather.h"
 
 @interface HMFWeatherTests : SenTestCase
@@ -42,6 +44,26 @@
     assertThat(self.testObj, notNilValue());
 }
 
-// Implement additional tests
+// Note: I start figuring out (architecting) how I want the code to work.
+// I will then translate all of the notes below into tests.
+//
+// After the weather object instantiates, I want it to request a weather update
+// from the weather service. This is asynchronous. We will then want to request
+// an update periodically (every 15 minutes or so), as well as when location (zip)
+// changes.
+// Calling requestUpdate will issue the async weather request.
+// Upon successful completion, it will fire its delegate passing self.
+// It will have temperature, imageUrl, zipcode, and pending properties.
+- (void)testPendingInitiallySet
+{
+    assertThatBool(self.testObj.pending, equalToBool(YES));
+}
+
+- (void)testPendingSetUntilRequestCompletes
+{
+    assertThatBool(self.testObj.pending, equalToBool(YES));
+    [self.testObj updateWeatherForZipcode:kDEFAULT_ZIPCODE];
+    assertThatBool(self.testObj.pending, equalToBool(NO));
+}
 
 @end
