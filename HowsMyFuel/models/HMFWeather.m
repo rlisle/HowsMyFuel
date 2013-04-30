@@ -29,13 +29,13 @@
 - (void)setZipcode:(int)zipcode
 {
     _zipcode = zipcode;
-    self.pending = YES;
     [self update];
 }
 
 - (void)update
 {
-    //Not implemented yet.
+    self.pending = YES;
+    
 }
 
 @end
