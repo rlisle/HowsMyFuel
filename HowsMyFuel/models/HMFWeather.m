@@ -10,4 +10,13 @@
 
 @implementation HMFWeather
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.pending = YES;
+    }
+    return self;
+}
+
 @end
