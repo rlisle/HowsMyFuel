@@ -18,6 +18,7 @@
 {
     self = [super init];
     if (self) {
+        _zipcode = kDEFAULT_ZIPCODE;
         self.pending = YES;
     }
     return self;
