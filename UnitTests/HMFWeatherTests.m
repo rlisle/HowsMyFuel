@@ -83,9 +83,8 @@
 
 - (void)testPendingSetAfterZipcodeSet
 {
-    assertThatBool(self.testObj.pending, equalToBool(YES));
     self.testObj.zipcode = kDEFAULT_ZIPCODE;
-    assertThatBool(self.testObj.pending, equalToBool(NO));
+    assertThatBool(self.testObj.pending, equalToBool(YES));
 }
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation HMFWeather
 
+@synthesize zipcode = _zipcode;
+
 - (id)init
 {
     self = [super init];
@@ -17,6 +19,23 @@
         self.pending = YES;
     }
     return self;
+}
+
+- (int)zipcode
+{
+    return _zipcode;
+}
+
+- (void)setZipcode:(int)zipcode
+{
+    _zipcode = zipcode;
+    self.pending = YES;
+    [self update];
+}
+
+- (void)update
+{
+    //Not implemented yet.
 }
 
 @end
